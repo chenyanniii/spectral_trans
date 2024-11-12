@@ -6,11 +6,11 @@ setwd(SPECIES)
 
 ## load the data
 
-X = spectral[!rownames(spectral) == "ns_27992",(start_wv-350+1):(end_wv-350+1)]
+X = spectral[,(start_wv-350+1):(end_wv-350+1)]
 X = as.matrix(X)
 
 rownames(func_count_tbl_fn) = rownames(spectral)
-Y = func_count_tbl_fn[!(rownames(func_count_tbl_fn) == "ns_27992"),]
+Y = func_count_tbl_fn
 Y = as.matrix(Y)
 
 
